@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bb1xe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #1e3a8a; /* สีฟ้า */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #ffdd57; /* สีเหลือง */
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #1e3a8a; /* สีฟ้า */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            max-width: 1200px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* ทำให้ข้อความอยู่ตรงกลาง */
+        }
+
+        .items-header {
+            text-align: center;
+            color: #1e3a8a; /* สีฟ้า */
+            margin-bottom: 20px;
+        }
+
+        .items-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .item {
+            border: 2px solid #ffdd57; /* สีเหลือง */
+            padding: 20px;
+            text-align: center;
+            width: 200px;
+            box-sizing: border-box;
+            background-color: #e0f7fa; /* สีฟ้าอ่อน */
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+
+        .item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .item h3 {
+            color: #1e3a8a; /* สีฟ้า */
+        }
+
+        .item p {
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .item button {
+            background-color: #1e3a8a; /* สีฟ้า */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s;
+        }
+
+        .item button:hover {
+            background-color: #ffdd57; /* สีเหลือง */
+            color: #1e3a8a; /* สีฟ้า */
+        }
+
+        footer {
+            background-color: #1e3a8a; /* สีฟ้า */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .history-table th, .history-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .history-table th {
+            background-color: #1e3a8a; /* สีฟ้า */
+            color: #fff;
+        }
+
+        .history-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .history-table tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bb1xe</h1>
+        <div id="points-display" style="font-size: 18px; margin-top: 10px;">
+            พ้อยต์ของคุณ: <span id="points">0</span> พ้อยต์
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">หน้าแรก</a></li>
+            <li><a href="#items">สินค้า</a></li>
+            <li><a href="#top-up">เติมพ้อยต์</a></li>
+            <li><a href="#history">ประวัติพ้อยต์</a></li> <!-- เพิ่มลิงก์นี้ -->
+            <li><a href="#contact">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home">
+        <h2>ยินดีต้อนรับสู่ Bb1xe</h2>
+        <p>เราเสนอขาย CMD ที่คุณชื่นชอบในราคาที่ดีที่สุด!</p>
+    </section>
+    
+    <section id="items">
+        <div class="items-header">
+            <h2>รายการสินค้า</h2>
+        </div>
+        <div class="items-list">
+            <div class="item">
+                <img src="items1.png" alt="Item 1">
+                <h3>ไอเท็ม 1</h3>
+                <p>ล็อกหัว</p>
+                <p>ราคา: 1000 พ้อยต์</p>
+                <button>ซื้อ</button>
+            </div>
+            <div class="item">
+                <img src="items1.png" alt="Item 2">
+                <h3>ไอเท็ม 2</h3>
+                <p>บูสFps</p>
+                <p>ราคา: 1000 พ้อยต์</p>
+                <button>ซื้อ</button>
+            </div>
+            <div class="item">
+                <img src="items1.png" alt="Item 3">
+                <h3>ไอเท็ม 3</h3>
+                <p>บูสFps</p>
+                <p>ราคา: 1000 พ้อยต์</p>
+                <button>ซื้อ</button>
+            </div>
+            <div class="item">
+                <img src="items1.png" alt="Item 4">
+                <h3>ไอเท็ม 4</h3>
+                <p>บูสFps</p>
+                <p>ราคา: 1000 พ้อยต์</p>
+                <button>ซื้อ</button>
+            </div>
+            <div class="item">
+                <img src="items1.png" alt="Item 5">
+                <h3>ไอเท็ม 5</h3>
+                <p>บูสFps</p>
+                <p>ราคา: 1000 พ้อยต์</p>
+                <button>ซื้อ</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="top-up">
+        <h2>เติมพ้อยต์</h2>
+        <form id="top-up-form" style="max-width: 600px; margin: 0 auto;">
+            <label for="amount">จำนวนเงินที่ต้องการเติม (บาท):</label>
+            <input type="number" id="amount" name="amount" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+            
+            <button type="submit" style="background-color: #1e3a8a; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; width: 100%;">เติมพ้อยต์</button>
+        </form>
+    </section>
+
+    <!-- เพิ่มส่วนประวัติพ้อยต์ -->
+    <section id="history">
+        <h2>ประวัติการเติมพ้อยต์</h2>
+        <table class="history-table">
+            <thead>
+                <tr>
+                    <th>วันที่</th>
+                    <th>จำนวนเงิน (บาท)</th>
+                    <th>พ้อยต์ที่เติม</th>
+                </tr>
+            </thead>
+            <tbody id="history-body">
+                <!-- ประวัติจะถูกเพิ่มที่นี่ -->
+            </tbody>
+        </table>
+    </section>
+    
+    <section id="contact">
+        <h2>ติดต่อเรา</h2>
+        <p>หากคุณมีคำถามหรือข้อสงสัย สามารถติดต่อเราได้ที่นี่</p>
+        <form action="submit_form.php" method="POST" style="max-width: 600px; margin: 0 auto;">
+            <label for="name">ชื่อ:</label>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+            
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+            
+            <label for="message">ข้อความ:</label>
+            <textarea id="message" name="message" required style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea>
+            
+            <button type="submit" style="background-color: #1e3a8a; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; width: 100%;">ส่งข้อความ</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Bb1xe. สงวนลิขสิทธิ์</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pointsDisplay = document.getElementById('points');
+            let points = 0;
+            const historyBody = document.getElementById('history-body');
+            const history = [];
+
+            // ฟังก์ชันเติมพ้อยต์
+            const topUpForm = document.getElementById('top-up-form');
+            topUpForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const amount = parseInt(document.getElementById('amount').value);
+                if (!isNaN(amount) && amount > 0) {
+                    const addedPoints = amount ; // สมมติว่า 1 บาท = 10 พ้อยต์
+                    points += addedPoints;
+                    pointsDisplay.textContent = points;
+
+                    // เพิ่มรายการในประวัติ
+                    const today = new Date().toLocaleDateString('th-TH');
+                    history.push({ date: today, amount: amount, points: addedPoints });
+                    updateHistory();
+
+                    alert(`คุณได้เติมพ้อยต์จำนวน ${addedPoints} พ้อยต์แล้ว!`);
+                } else {
+                    alert('กรุณากรอกจำนวนเงินที่ถูกต้อง');
+                }
+            });
+
+            // ฟังก์ชันหักพ้อยต์เมื่อซื้อสินค้า
+            const buttons = document.querySelectorAll('.item button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemPrice = 1000; 
+                    if (points >= itemPrice) {
+                        points -= itemPrice;
+                        pointsDisplay.textContent = points;
+                        alert('คุณได้ซื้อสินค้าแล้ว!');
+                    } else {
+                        alert('พ้อยต์ของคุณไม่เพียงพอสำหรับการซื้อสินค้านี้');
+                    }
+                });
+            });
+
+            // ฟังก์ชันอัปเดตประวัติพ้อยต์
+            function updateHistory() {
+                historyBody.innerHTML = '';
+                history.forEach(entry => {
+                    const row = `<tr>
+                        <td>${entry.date}</td>
+                        <td>${entry.amount}</td>
+                        <td>${entry.points}</td>
+                    </tr>`;
+                    historyBody.insertAdjacentHTML('beforeend', row);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
